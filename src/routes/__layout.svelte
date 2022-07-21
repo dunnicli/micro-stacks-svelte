@@ -28,8 +28,8 @@
     <Title title="Svelte Micro-Stacks " />
     <div class="links">
       <a href="/">Home</a>
+      <a href="/mintNft">Mint NFT</a>
       <a href="/about">About</a>
-      <a href="/">Connect Wallet</a>
     </div>
   </nav>
 </header>
