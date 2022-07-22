@@ -1,6 +1,10 @@
 <script>
-  import { getOpenContractCall } from "@micro-stacks/svelte";
-  import { getAccount, getAuth } from "@micro-stacks/svelte";
+  import {
+    getOpenContractCall,
+    getAccount,
+    getAuth,
+    geNetwork,
+  } from "@micro-stacks/svelte";
   import {
     uintCV,
     intCV,
@@ -20,8 +24,6 @@
     FungibleConditionCode,
   } from "micro-stacks/transactions";
 
-  import { geNetwork } from "@micro-stacks/svelte";
-
   const network = geNetwork();
   $network.setNetwork("testnet");
 
@@ -35,16 +37,6 @@
 
   let recipient = "ST12H4ANQQ2NGN96KB0ZYVDG02NWT99A9TPE22SP9";
   let metadataUri = "";
-
-  /**
-  const postConditions = [
-    makeStandardSTXPostCondition(
-      $account.stxAddress!,
-      FungibleConditionCode.LessEqual,
-      "100"
-    ),
-  ];
-  */
 
   async function onClick() {
     const clarityRecipient = standardPrincipalCV(recipient);
