@@ -29,6 +29,7 @@
     <div class="links">
       <a href="/">Home</a>
       <a href="/mintNft">Mint NFT</a>
+      <a href="/checkMinter">Get Minter</a>
       <a href="/about">About</a>
     </div>
   </nav>
