@@ -5,20 +5,11 @@
     getAuth,
     geNetwork,
   } from "@micro-stacks/svelte";
-  import {
-    uintCV,
-    intCV,
-    bufferCV,
-    stringAsciiCV,
-    stringUtf8CV,
-    standardPrincipalCV,
-    trueCV,
-  } from "micro-stacks/clarity";
+  import { stringAsciiCV, standardPrincipalCV } from "micro-stacks/clarity";
 
   import {
     makeStandardSTXPostCondition,
     makeStandardNonFungiblePostCondition,
-    makeContractNonFungiblePostCondition,
     NonFungibleConditionCode,
     createAssetInfo,
     FungibleConditionCode,
@@ -44,7 +35,6 @@
 
     const functionArgs = [clarityRecipient, clarityUri];
 
-    // contract address for the asset contract
     const assetAddress = "ST12H4ANQQ2NGN96KB0ZYVDG02NWT99A9TPE22SP9";
     const postConditionAddress = "ST12H4ANQQ2NGN96KB0ZYVDG02NWT99A9TPE22SP9";
     const nftPostConditionCode = NonFungibleConditionCode.Owns;

@@ -1,31 +1,21 @@
 <script>
-  //import { callReadOnlyFunction } from "micro-stacks/api";
   import { getOpenContractCall, geNetwork } from "@micro-stacks/svelte";
 
-  import { stringAsciiCV, standardPrincipalCV } from "micro-stacks/clarity";
+  import { standardPrincipalCV } from "micro-stacks/clarity";
 
   import {
     makeStandardSTXPostCondition,
-    //createAssetInfo,
     FungibleConditionCode,
   } from "micro-stacks/transactions";
 
-  //let result = "";
   let stxAddress = "";
-  //let minterNotes = "";
-  //let myresult = "";
   const network = geNetwork();
-
-  //const auth = getAuth();
-
   const contractCall = getOpenContractCall();
-  //const account = getAccount();
 
   async function deleteMinter() {
     const contractAddress = "ST12H4ANQQ2NGN96KB0ZYVDG02NWT99A9TPE22SP9";
     const senderAddress = "ST12H4ANQQ2NGN96KB0ZYVDG02NWT99A9TPE22SP9";
     const clarityMinter = standardPrincipalCV(stxAddress);
-    //const clarityNotes = stringAsciiCV(minterNotes);
 
     const postConditionAddress = senderAddress;
     const stxConditionCode = FungibleConditionCode.LessEqual;
@@ -38,18 +28,6 @@
         stxConditionAmount
       ),
     ];
-    //const functionArgs = [clarityMinter, clarityNotes];
-
-    /**
-      const options = {
-        contractAddress: contractAddress,
-        contractName: contractName,
-        functionName: functionName,
-        functionArgs: functionArgs,
-        network: $network.setNetwork("testnet"),
-        senderAddress: senderAddress,
-      };
-      */
 
     const options = {
       contractAddress: contractAddress,
@@ -58,10 +36,7 @@
       functionArgs: [clarityMinter],
       network: $network.setNetwork("testnet"),
       postConditions,
-      //appDetails: {
-      //name: "acatv4",
-      //icon: window.location.origin + "/vercel.svg",
-      //},
+
       // @ts-ignore
       onFinish: (data) => {
         console.log("Stacks Transaction:", data.stacksTransaction);
@@ -85,11 +60,6 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
 
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <hr class="border-4" />
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
     <h1>Delete Minter</h1>
     <p>&nbsp;</p>
     Minter STX Address<br />

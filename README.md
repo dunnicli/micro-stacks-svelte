@@ -1,6 +1,6 @@
 ## SvelteKit and Micro-Stacks
 
-I created this app to prototype the incorporation of micro-stacks into a Sveltekit app.
+I created this app to prototype the incorporation of micro-stacks into a Sveltekit app. I tried to use stacks.js but there were major issues. That's why I went with micro-stacks.
 
 It works I'm happy to say. I started with this repo from fungible-systems:
 
@@ -9,9 +9,17 @@ https://github.com/fungible-systems/micro-stacks-examples/tree/main/examples/wit
 Our main app is an online art gallery (real paintings). The artists have asked if they could
 create nfts and so here we are. Only the artist can create nfts.
 
-Everything here works. You will have to deploy your own contract to testnet. Feel free to copy and use anything.
+Everything here works. You will have to deploy your own contract to testnet. Feel free to copy and use anything. There is a copy of the contract in the lib folder.
 
 Also, I'm not a typescript fan and avoid it whenever possible. However, the repo I built this from is typescript so I have to live with it in this context.
+
+Create an issue if you have any questions.
+
+I'm on the Stacks Discord channel to ask questions.
+
+@dunnicli
+
+I'd like to thank @aulneau for his help and for his great work on micro-stacks.
 
 # create-svelte
 

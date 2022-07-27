@@ -7,7 +7,6 @@
 
   import { uintCV } from "micro-stacks/clarity";
 
-  let result = "";
   let tid = 0;
   let myresult = 0;
   let myuri = "";
@@ -17,7 +16,6 @@
     const contractAddress = "ST12H4ANQQ2NGN96KB0ZYVDG02NWT99A9TPE22SP9";
     const contractName = "acatv4";
     const functionName = "get-metaUri";
-    //const functionArgs = [uintCV(tid)];
     const senderAddress = "ST12H4ANQQ2NGN96KB0ZYVDG02NWT99A9TPE22SP9";
 
     const options = {
@@ -92,7 +90,7 @@
     </p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <hr class="border-4" />
+    <hr class="border-4 border-black" />
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <h1>Get Token Metadata URI</h1>
