@@ -29,7 +29,10 @@
     <div class="links">
       <a href="/">Home</a>
       <a href="/mintNft">Mint NFT</a>
+      <a href="/apiCalls">API Calls</a>
       <a href="/checkMinter">Get Minter</a>
+      <a href="/addMinter">Add Minter</a>
+      <a href="/deleteMinter">Delete Minter</a>
       <a href="/about">About</a>
     </div>
   </nav>
